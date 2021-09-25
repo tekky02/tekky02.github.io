@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>写在开始</title>
+      <link href="/2021/09/25/xie-zai-kai-shi/"/>
+      <url>/2021/09/25/xie-zai-kai-shi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="写在开始"><a href="#写在开始" class="headerlink" title="写在开始"></a>写在开始</h2><p>越来越觉得自己在技术上始终停留在小白层面，也胡乱地看了很多内容，但总感觉缺乏深度，也没有在过程中把自己的一些感受跟心得记录下来，可能新学到的一些东西在工作中没有使用到，一段时间后就忘记了。</p><p>看来好好经营一个博客还是有必要的，此前也确实买了一台云服务器并搭建了自己的博客。但是自己并没有真正好好去经营，甚至回过神来发现服务器已经到期了，自己写下的一些数据也都丢失了（实际常年摆烂没写太多内容🤕）。</p><h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><p>从现在开始，努力做到每周至少写一篇有意义的文章，把自己一周之内学到的最有价值的东西记录下来（即使实在没有找到特别有价值的记录点，简单描述一下自己近期的情绪状态似乎也不错？🏃🏻）。希望一两年之后回过头来看，能够从这些文字中间看到自己的成长。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 感悟 </tag>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/09/24/hello-world/"/>
       <url>/2021/09/24/hello-world/</url>
