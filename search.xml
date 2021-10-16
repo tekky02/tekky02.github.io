@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Code-OSS 安装cpptools</title>
+      <link href="/2021/10/16/cpptools-for-openvsx/"/>
+      <url>/2021/10/16/cpptools-for-openvsx/</url>
+      
+        <content type="html"><![CDATA[<h2 id="cpptools手动安装踩坑"><a href="#cpptools手动安装踩坑" class="headerlink" title="cpptools手动安装踩坑"></a>cpptools手动安装踩坑</h2><p>好久没写C/C++了，今天用VSC写课设时总感觉哪里不对劲，楞了半天，好家伙怎么没有任何代码提示？不行得赶紧下载插件。咦？怎么找不到熟悉的<code>C/C++ IntelliSense</code>了。哦原来这款插件是微软提供的，在开源版本的Code里面没法直接搜到，那没事了😅。</p><p>行吧，手动下载安装一下，在<a href="https://github.com/Microsoft/vscode-cpptools/releases">此处</a>下载vsix文件。</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">wget https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode-cpptools&#x2F;releases&#x2F;download&#x2F;1.7.0&#x2F;cpptools-linux.vsixcode --install-extension cpptools-linux-vsix<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>搞定。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发工具 </tag>
+            
+            <tag> 效率 </tag>
+            
+            <tag> 踩坑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>写在开始</title>
       <link href="/2021/09/25/xie-zai-kai-shi/"/>
       <url>/2021/09/25/xie-zai-kai-shi/</url>
