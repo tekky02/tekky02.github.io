@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>【Unicode vs UTF-8】浅谈字符集与编码方案</title>
+      <link href="/2021/10/20/unicode-vs-utf8/"/>
+      <url>/2021/10/20/unicode-vs-utf8/</url>
+      
+        <content type="html"><![CDATA[<p>之前对于unicode和utf-8这两个东西一直有一个认知上的误区，总把这俩混为一谈，最近工作中需要处理字符编解码的问题，也接着此次机会对相关的一些概念有了一些新的认识，简单做一下总结。</p><h2 id="字符集与Unicode"><a href="#字符集与Unicode" class="headerlink" title="字符集与Unicode"></a>字符集与Unicode</h2><p>字符集：为每一个<code>字符</code>分配一个唯一的ID（学名为码位/码点/code point）</p><p>而我们常说的Unicode就是这样的一个字符集，它囊括了地球上来自任何文化的字母和符号！可以简单的理解为，unicode定义了一张表，这张表里面包括了现存所有字符到码位（<code>code point</code>）的一一映射关系，比如<code>汉</code>这个字符对应的码位是0x6C49。</p><p>有了这张映射表是否就一切就绪了呢，这些字符如何在计算机这种存储，又如何进行传输（比如在网络上传输）？这些就不是字符集的管辖范围了，而是交给不同的编码方案来完成。</p><ul><li>不过我们也常常在广义上认为Unicode实际是一种标准，这套标准定义了一个字符集和一些列的编码规则，即Unicode字符集和UTF-8、UTF-16、UTF-32等一系列编码方案…</li></ul><h2 id="编码方案与UTF-8"><a href="#编码方案与UTF-8" class="headerlink" title="编码方案与UTF-8"></a>编码方案与UTF-8</h2><p>我们知道计算机存储的数据最终都是二进制的，比如上述说的<code>汉</code>这个字符对应的码位<code>0x6C49</code>如果直接翻译成二进制存储的话应该是<code>0110110001001001</code>，显然这需要至少两个字节才能完成存储，而有的字符可能超过了这个长度，需要3个4个字节甚至更多才能完成存储，如果规定所有的字符都采用同样的长度来进行编码，显然对于英文字符（仅需要1字节即可完全存储）来说浪费了过多空间。这时就轮到UTF-8出场了。</p><p>UTF-8顾名思义，是一套以8位为一个编码单位的编码方案，并且是变长编码，它将一个<code>Code Point</code>编码到1～4个字节</p><table><thead><tr><th>码位区间</th><th>编码形式</th></tr></thead><tbody><tr><td>U+0000 ~ U+007F</td><td>0xxxxxxx</td></tr><tr><td>U+0080 ~ U+07FF</td><td>110xxxxx 10xxxxxx</td></tr><tr><td>U+0800 ~ U+FFFF</td><td>1110xxxx 10xxxxxx 10xxxxxx</td></tr><tr><td>U+10000 ~ U+10FFFF</td><td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td></tr></tbody></table><p>从上表总结：</p><ul><li><p>对于单字节的字符，编码的首位为0，对于英文文本，UTF-8编码只占用一个字节，和ASCII码完全相同</p></li><li><p>对于n(n&gt;1)个字节的字符，首字节的前n位为1，n+1位为0，后面的字节都将前2位设置为10，剩下的空位用于填充该字符的unicode码</p></li></ul><p>如此一来，计算机在处理时每次都可以根据开始位置处1的个数读取相应字节数作为一个码位进行翻译，完成变长编码的处理。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符与编码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Code-OSS 安装cpptools</title>
       <link href="/2021/10/16/cpptools-for-openvsx/"/>
       <url>/2021/10/16/cpptools-for-openvsx/</url>
